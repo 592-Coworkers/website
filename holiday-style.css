@@ -1,0 +1,135 @@
+:root {
+    --near-black: #121814;
+    --pine: #263727;
+    --brick: #701716;
+    --crimson: #C10F17;
+}
+
+/* Reusable classes */
+.bg-pine {
+    background: var(--pine);
+}
+
+.bg-dark {
+    background: var(--near-black);
+}
+
+.bg-brick {
+    background: var(--brick);
+}
+
+.partial-width {
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.content-block {
+    box-sizing: border-box;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+/* specific elements */
+body {
+    background-color: var(--pine);
+    color: white;
+    font-family: 'Volkhov', serif;
+    margin: 0;
+    text-align: center;
+}
+
+#snow-fab {
+    background: var(--crimson);
+    padding: 0.75rem;
+    border-radius: 6.25rem;
+    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.35);
+    border: none;
+    height: 3.75rem;
+    width: 3.75rem;
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    transition: .2s;
+}
+
+#snow-fab:hover, #snow-fab:active {
+    background: var(--brick);
+    transition: .2s;
+    cursor: pointer;
+}
+
+main {
+    margin: 0;
+}
+
+.fit-height {
+    height:fit-content;
+}
+
+h1, h2, h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-block: 0;
+}
+
+#hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.hero-banner {
+    background-image: url('assets/hero.jpg');
+    background-repeat:repeat-x;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+}
+
+.hero-banner img {
+    width: 100%;
+}
+
+#greeting {
+    flex: 1 0 0;
+}
+
+#greeting img {
+    max-width: 70%; 
+}
+
+#community {}
+
+#add-note {
+    font-family: 'Volkhov', serif;
+    font-weight: 700;
+    width: 100%;
+    max-width: 32rem;
+    padding: 1rem 1.5rem;
+    border-radius: 6.25rem;
+    background: var(--near-black);
+    color: white;
+    border: none;
+    box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.35);
+}
+
+#add-note:hover, #add-note:active {
+    background: var(--pine);
+    transition: .2s;
+    cursor: pointer;
+}
+
+footer {
+    box-sizing: border-box;
+    padding: 2rem 1rem 4rem;
+}
