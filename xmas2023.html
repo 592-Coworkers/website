@@ -1,132 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta property="og:image" content="/assets/preview.jpg">
-        <meta property="og:description" content="Happy holidays from Cindy & Ian!"/>
-        <meta property="og:type" content="blog"/>
-        <title>xmas 2k23</title>
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="stylesheet" href="holiday-style.css" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c10f17">
-        <meta name="msapplication-TileColor" content="#263727">
-        <meta name="theme-color" content="#ffffff">
-    </head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="/assets/preview.jpg" />
+    <meta
+      property="og:description"
+      content="Happy holidays from Cindy & Ian!"
+    />
+    <meta property="og:type" content="blog" />
+    <title>xmas 2k23</title>
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="holiday-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c10f17" />
+    <meta name="msapplication-TileColor" content="#263727" />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    <script src="index.js" type="module" defer></script>
+  </head>
+  <body>
     <!-- <nav></nav> -->
     <main>
-        <button id="snow-fab" aria-label="let it snow"><img src="assets/snowflake.svg" alt="snowflake"></button>
-        <!-- Snowflake by Dilon Choudhury from Noun Project (CC BY 3.0) https://thenounproject.com/browse/icons/term/snowflake/  -->
-        <section id="hero" class="full-width">
-            <div class="hero-banner full-width">
-                <img class="partial-width" src="assets/hero.jpg" alt="cindy and ian in holiday attire">
-            </div>
-            <h1 id="greeting" class="content-block partial-width">
-                Cindy & Ian wish you a
-                <img src="assets/happyholidays-txt.svg" alt="happy holidays!">
-            </h1>
-        </section>
-        <section id="recap">
-            <div class="full-width bg-dark content-block">
-                <h2>This year...</h2>
-            </div>
-            <div class="full-width bg-pine content-block">
-                <h3>Where we've been</h3>
-                <div class="slideshow"></div>
-                <div class="caption"></div>
-            </div>
-            <div class="full-width bg-dark content-block">
-                <h3>Some things we did</h3>
-                <div class="slideshow"></div>
-                <div class="caption"></div>
-            </div>
-            <div class="full-width bg-pine content-block">
-                <h3></h3>
-            </div>
-            <div class="full-width bg-dark content-block">
-                <h3>Read our takes on the year</h3>
-                <ul>
-                    <li><a href="cindy-recap-2023">Cindy's 2023 lookback</a></li>
-                    <li><a href="">Ian's latest newsletter</a></li>
-                </ul>
-            </div>
-            <div class="full-width bg-pine content-block">
-                <h3>Where to find us</h3>
-                <ul>
-                    <li><a href="https://www.instagram.com/cindydoubleyou/">Cindy's Instagram</a></li>
-                    <li><a href="https://cndwng.com/">Cindy's website</a></li>
-                    <li><a href="https://www.instagram.com/iankranz/">Ian's Instagram</a></li>
-                    <li><a href="https://iankranz.substack.com/">Ian's newsletter</a></li>
-                </ul>
-            </div>
-            <div class="full-width bg-dark content-block">
-                <img src="assets/cheersto2024-txt.svg" alt="cheers to 2023">
-            </div>
-        </section>
-        <section id="community" class="full-width bg-brick content-block">
-            <h2>Bulletin board</h2>
-            <button id="add-note" class="partial-width">Leave a note</button>
-            <div id="comment-list" class="partial-width">
-                <div class="comment">
-                    <div class="comment-name">Cindy</div>
-                    <div class="comment-message">Happy holidays! We wish you a Merry Christmas and a happy New Year. Jingle bells jingle bells jingle all the way.</div>
-                </div>
-            </div>
-        </section>
-
-        <div id="comment-modal" class="bg-brick full-width">
-            <div class="modal-content partial-width">
-                <button id="close"><img src="assets/chevron-circle-left.svg"></button>
-                <h3 style="text-align:center; width: 100%;">Leave a note</h3>
-                <p style="margin: 0">Drop your name and a message to add to our virtual card! Your message will be visible to anyone who visits.</p>
-                <form>
-                    <label for="name">Name</label>
-                    <input id="name" type="text" name="name">
-                    <label for="message">Message</label>
-                    <textarea id="message" type="text" name="message" rows="3"></textarea>
-                    <input id="submit" type="submit" value="submit">
-                    <!-- on submit, can we refresh and bring people to the comment list? -->
-
-                </form>
-            </div>
+      <button id="snow-fab" aria-label="let it snow">
+        <img src="assets/snowflake.svg" alt="snowflake" />
+      </button>
+      <!-- Snowflake by Dilon Choudhury from Noun Project (CC BY 3.0) https://thenounproject.com/browse/icons/term/snowflake/  -->
+      <section id="hero" class="full-width">
+        <div class="hero-banner full-width">
+          <img
+            class="partial-width"
+            src="assets/hero.jpg"
+            alt="cindy and ian in holiday attire"
+          />
         </div>
+        <h1 id="greeting" class="content-block partial-width">
+          Cindy & Ian wish you a
+          <img src="assets/happyholidays-txt.svg" alt="happy holidays!" />
+        </h1>
+      </section>
+      <section id="recap">
+        <div class="full-width bg-dark content-block">
+          <h2>This year...</h2>
+        </div>
+        <div class="full-width bg-pine content-block">
+          <h3>Where we've been</h3>
+          <div class="slideshow"></div>
+          <div class="caption"></div>
+        </div>
+        <div class="full-width bg-dark content-block">
+          <h3>Some things we did</h3>
+          <div class="slideshow"></div>
+          <div class="caption"></div>
+        </div>
+        <div class="full-width bg-pine content-block">
+          <h3></h3>
+        </div>
+        <div class="full-width bg-dark content-block">
+          <h3>Read our takes on the year</h3>
+          <ul>
+            <li><a href="cindy-recap-2023">Cindy's 2023 lookback</a></li>
+            <li><a href="">Ian's latest newsletter</a></li>
+          </ul>
+        </div>
+        <div class="full-width bg-pine content-block">
+          <h3>Where to find us</h3>
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/cindydoubleyou/"
+                >Cindy's Instagram</a
+              >
+            </li>
+            <li><a href="https://cndwng.com/">Cindy's website</a></li>
+            <li>
+              <a href="https://www.instagram.com/iankranz/">Ian's Instagram</a>
+            </li>
+            <li>
+              <a href="https://iankranz.substack.com/">Ian's newsletter</a>
+            </li>
+          </ul>
+        </div>
+        <div class="full-width bg-dark content-block">
+          <img src="assets/cheersto2024-txt.svg" alt="cheers to 2023" />
+        </div>
+      </section>
+      <section id="community" class="full-width bg-brick content-block">
+        <h2>Bulletin board</h2>
+        <button id="add-note" class="partial-width">Leave a note</button>
+        <div id="comment-list" class="partial-width"></div>
+      </section>
 
+      <div id="comment-modal" class="bg-brick full-width">
+        <div class="modal-content partial-width">
+          <button id="close">
+            <img src="assets/chevron-circle-left.svg" />
+          </button>
+          <h3 style="text-align: center; width: 100%">Leave a note</h3>
+          <p style="margin: 0">
+            Drop your name and a message to add to our virtual card! Your
+            message will be visible to anyone who visits.
+          </p>
+          <form>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" />
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              type="text"
+              name="message"
+              rows="3"
+            ></textarea>
+            <input id="submit" type="submit" value="submit" />
+            <!-- on submit, can we refresh and bring people to the comment list? -->
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="bg-dark full-width">
-        Built in 2023 for our friends & family 
-        <br> 
-        ♥️ love, cindy & ian
+      Built in 2023 for our friends & family
+      <br />
+      ♥️ love, cindy & ian
     </footer>
-</body>
-<script>
-
-    var modal = document.getElementById("comment-modal")
-    var btn = document.getElementById("add-note")
-    var back = document.getElementById("close")
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-        modal.style.display = "flex"
-    }
-
-    back.onclick = function() {
-        modal.style.display = "none"
-    }
-
-    function keyCode(event) {
-        var x = event.keyCode
-        if (x == 27) {
-            modal.style.display = "none"
-        }
-    }
-</script>
+  </body>
 </html>
