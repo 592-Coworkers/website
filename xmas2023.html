@@ -96,8 +96,42 @@
       <section id="community" class="full-width bg-brick content-block">
         <h2>Bulletin board</h2>
         <button id="add-note" class="partial-width">Leave a note</button>
-        <div id="comment-list"></div>
+        <div id="comment-list" class="partial-width">
+          <div class="comment">
+            <div class="comment-name">Cindy</div>
+            <div class="comment-message">
+              Happy holidays! We wish you a Merry Christmas and a happy New
+              Year. Jingle bells jingle bells jingle all the way.
+            </div>
+          </div>
+        </div>
       </section>
+
+      <div id="comment-modal" class="bg-brick full-width">
+        <div class="modal-content partial-width">
+          <button id="close">
+            <img src="assets/chevron-circle-left.svg" />
+          </button>
+          <h3 style="text-align: center; width: 100%">Leave a note</h3>
+          <p style="margin: 0">
+            Drop your name and a message to add to our virtual card! Your
+            message will be visible to anyone who visits.
+          </p>
+          <form>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" />
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              type="text"
+              name="message"
+              rows="3"
+            ></textarea>
+            <input id="submit" type="submit" value="submit" />
+            <!-- on submit, can we refresh and bring people to the comment list? -->
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="bg-dark full-width">
       Built in 2023 for our friends & family
@@ -105,5 +139,25 @@
       ♥️ love, cindy & ian
     </footer>
   </body>
-  <script></script>
+  <script>
+    var modal = document.getElementById("comment-modal")
+    var btn = document.getElementById("add-note")
+    var back = document.getElementById("close")
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+      modal.style.display = "flex"
+    }
+
+    back.onclick = function () {
+      modal.style.display = "none"
+    }
+
+    function keyCode(event) {
+      var x = event.keyCode
+      if (x == 27) {
+        modal.style.display = "none"
+      }
+    }
+  </script>
 </html>
