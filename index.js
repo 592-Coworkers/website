@@ -68,6 +68,8 @@ async function submitComment(e) {
     body: bodyString
   })
   renderComment({ name, message }, "prepend")
+  nameInput.value = ""
+  messageInput.value = ""
   modal.style.display = "none"
 }
 
