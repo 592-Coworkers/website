@@ -74,8 +74,12 @@
         </section>
         <section id="community" class="full-width bg-brick content-block">
             <h2>Bulletin board</h2>
-            <button id="add-note" class="partial-width" onclick="openCommentModal()">Leave a note</button>
+            <button id="add-note" class="partial-width">Leave a note</button>
             <div id="comment-list">
+                <div class="comment">
+                    <div class="comment-name">Cindy</div>
+                    <div class="comment-message">Happy holidays! We wish you a Merry Christmas and a happy New Year. Jingle bells jingle bells jingle all the way.</div>
+                </div>
             </div>
         </section>
 
@@ -88,8 +92,10 @@
                     <label for="name">Name</label>
                     <input id="name" type="text" name="name">
                     <label for="message">Message</label>
-                    <textarea id="message" type="text" name="message"></textarea>
+                    <textarea id="message" type="text" name="message" rows="3"></textarea>
                     <input id="submit" type="submit" value="submit">
+                    <!-- on submit, can we refresh and bring people to the comment list? -->
+
                 </form>
             </div>
         </div>
@@ -103,21 +109,24 @@
 </body>
 <script>
 
-    var modal = document.getElementById("comment-modal");
-    var btn = document.getElementById("add-note");
-    var back = document.getElementById("close");
+    var modal = document.getElementById("comment-modal")
+    var btn = document.getElementById("add-note")
+    var back = document.getElementById("close")
 
     // When the user clicks on the button, open the modal
     btn.onclick = function() {
-        modal.style.display = "flex";
+        modal.style.display = "flex"
     }
 
     back.onclick = function() {
-        modal.style.display = "none";
+        modal.style.display = "none"
     }
 
-    function openCommentModal() {
-
+    function keyCode(event) {
+        var x = event.keyCode
+        if (x == 27) {
+            modal.style.display = "none"
+        }
     }
 </script>
 </html>

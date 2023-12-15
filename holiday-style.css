@@ -100,6 +100,11 @@ li a:hover, a:hover {
     text-decoration: underline wavy;
 }
 
+footer {
+    box-sizing: border-box;
+    padding: 2rem 1rem 4rem;
+}
+
 #hero {
     min-height: 100vh;
     display: flex;
@@ -148,6 +153,36 @@ li a:hover, a:hover {
     cursor: pointer;
 }
 
+#comment-list {
+    display: flex;
+    align-self: stretch;
+}
+
+.comment {
+    display: flex;
+    padding: 1rem 2rem;
+    background: white;
+    border-radius: 2.5rem;
+    box-shadow: 0px 0px 4px 0px rgba(18, 24, 20, 0.35);
+    color: var(--pine);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.comment-name {
+    text-align: left;
+    font-style: italic;
+    align-self: stretch;
+}
+
+.comment-message {
+    text-align: left;
+    align-self: stretch;
+}
+
+/* Modal stuff */
 #comment-modal {
     display: none;
     position: fixed;
@@ -194,10 +229,6 @@ li a:hover, a:hover {
     outline-offset: 2px;
 }
 
-#message {
-    height: 4rem;
-}
-
 .modal-content form label {
     text-align: left;
     font-size: 0.75rem;
@@ -215,11 +246,6 @@ li a:hover, a:hover {
 #close:hover, #close:active {
     background: var(--pine);
     cursor: pointer;
-}
-
-footer {
-    box-sizing: border-box;
-    padding: 2rem 1rem 4rem;
 }
 
 /* cindy recap specific */
