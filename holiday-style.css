@@ -60,11 +60,18 @@ body {
   transition: 0.2s;
 }
 
-#snow-fab:hover,
 #snow-fab:active {
   background: var(--brick);
   transition: 0.2s;
   cursor: pointer;
+}
+
+@media (hover: hover) {
+  #snow-fab:hover {
+    background: var(--brick);
+    transition: 0.2s;
+    cursor: pointer;
+  }
 }
 
 main {

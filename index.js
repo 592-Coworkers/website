@@ -53,6 +53,14 @@ async function submitComment(e) {
   e.preventDefault()
   const name = nameInput.value
   const message = messageInput.value
+  if (!name) {
+    alert("Who are you??? Please enter a name!!")
+    return
+  }
+  if (!message) {
+    alert("Hold your horses, partner! You can't submit a blank comment!")
+    return
+  }
   const bodyString = JSON.stringify({ name, message })
   await fetch("https://hash.spudlocker.com/xmas/comment", {
     method: "POST",
