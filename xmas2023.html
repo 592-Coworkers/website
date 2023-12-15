@@ -74,10 +74,26 @@
         </section>
         <section id="community" class="full-width bg-brick content-block">
             <h2>Bulletin board</h2>
-            <button id="add-note" class="partial-width">Leave a note</button>
+            <button id="add-note" class="partial-width" onclick="openCommentModal()">Leave a note</button>
             <div id="comment-list">
             </div>
         </section>
+
+        <div id="comment-modal" class="bg-brick full-width">
+            <div class="modal-content partial-width">
+                <button id="close"><img src="assets/chevron-circle-left.svg"></button>
+                <h3 style="text-align:center; width: 100%;">Leave a note</h3>
+                <p style="margin: 0">Drop your name and a message to add to our virtual card! Your message will be visible to anyone who visits.</p>
+                <form>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name">
+                    <label for="message">Message</label>
+                    <textarea id="message" type="text" name="message"></textarea>
+                    <input id="submit" type="submit" value="submit">
+                </form>
+            </div>
+        </div>
+
     </main>
     <footer class="bg-dark full-width">
         Built in 2023 for our friends & family 
@@ -86,6 +102,22 @@
     </footer>
 </body>
 <script>
-    
+
+    var modal = document.getElementById("comment-modal");
+    var btn = document.getElementById("add-note");
+    var back = document.getElementById("close");
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "flex";
+    }
+
+    back.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    function openCommentModal() {
+
+    }
 </script>
 </html>
