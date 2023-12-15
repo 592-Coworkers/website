@@ -26,6 +26,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c10f17" />
     <meta name="msapplication-TileColor" content="#263727" />
     <meta name="theme-color" content="#ffffff" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <script src="index.js" type="module" defer></script>
   </head>
   <body>
@@ -96,15 +97,7 @@
       <section id="community" class="full-width bg-brick content-block">
         <h2>Bulletin board</h2>
         <button id="add-note" class="partial-width">Leave a note</button>
-        <div id="comment-list" class="partial-width">
-          <div class="comment">
-            <div class="comment-name">Cindy</div>
-            <div class="comment-message">
-              Happy holidays! We wish you a Merry Christmas and a happy New
-              Year. Jingle bells jingle bells jingle all the way.
-            </div>
-          </div>
-        </div>
+        <div id="comment-list" class="partial-width"></div>
       </section>
 
       <div id="comment-modal" class="bg-brick full-width">
@@ -139,25 +132,4 @@
       ♥️ love, cindy & ian
     </footer>
   </body>
-  <script>
-    var modal = document.getElementById("comment-modal")
-    var btn = document.getElementById("add-note")
-    var back = document.getElementById("close")
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function () {
-      modal.style.display = "flex"
-    }
-
-    back.onclick = function () {
-      modal.style.display = "none"
-    }
-
-    function keyCode(event) {
-      var x = event.keyCode
-      if (x == 27) {
-        modal.style.display = "none"
-      }
-    }
-  </script>
 </html>
