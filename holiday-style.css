@@ -50,13 +50,13 @@ body {
   background: var(--crimson);
   padding: 0.75rem;
   border-radius: 6.25rem;
-  box-shadow: 0px 2px 12px 0px #000;
+  box-shadow: 0px 2px 24px 0px #fff;
   border: none;
   height: 3.75rem;
   width: 3.75rem;
   position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
+  bottom: 1.5rem;
+  right: 1.5rem;
   transition: 0.2s;
 }
 
@@ -98,6 +98,8 @@ ul {
   margin-block-end: 0;
   font-style: italic;
   gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 li a,
@@ -309,11 +311,6 @@ p {
   padding-top: 0.5rem;
 }
 
-#recap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .carousel {
   display: flex;
@@ -322,10 +319,11 @@ p {
   max-width: 32rem;
   overflow-x: scroll;
   gap: 1rem;
-  padding-top: 1rem;
+  /* padding-top: 1rem; */
   padding-bottom: 1rem;
 }
 
 .carousel img {
   height: 24rem;
+  border-radius: 0.5rem;
 }
