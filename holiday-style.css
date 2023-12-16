@@ -109,8 +109,11 @@ a:visited {
 }
 
 li a:hover,
-a:hover {
+a:hover,
+li a:focus-visible,
+a:focus-visible {
   text-decoration: underline wavy;
+  outline: none;
 }
 
 footer {
@@ -246,8 +249,8 @@ footer {
   box-shadow: 0px 0px 4px 0px rgba(18, 24, 20, 0.35);
 }
 
-.modal-content form input:focus,
-.modal-content form textarea:focus,
+.modal-content form input:focus-visible,
+.modal-content form textarea:focus-visible,
 button:focus {
   outline: 1px dashed white;
   outline-offset: 2px;
