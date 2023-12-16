@@ -308,3 +308,24 @@ p {
   font-style: italic;
   padding-top: 0.5rem;
 }
+
+#recap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 32rem;
+  overflow-x: scroll;
+  gap: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.carousel img {
+  height: 24rem;
+}
