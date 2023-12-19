@@ -308,6 +308,10 @@ p {
   border-radius: 1rem;
 }
 
+.journal-photo .carousel img {
+    width: unset;
+}
+
 .journal-photo .caption {
   font-size: 0.75rem;
   line-height: 166.667%;
