@@ -157,6 +157,7 @@ footer {
 #submit {
   font-family: "Volkhov", serif;
   font-weight: 700;
+  font-size: 1rem;
   width: 100%;
   max-width: 32rem;
   padding: 1rem 1.5rem;
@@ -243,6 +244,7 @@ footer {
 .modal-content form input,
 .modal-content form textarea {
   font-family: "Volkhov", serif;
+  font-size: 1rem;
   margin-bottom: 2rem;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
