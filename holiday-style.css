@@ -307,6 +307,9 @@ p {
   width: 100%;
   border-radius: 1rem;
 }
+.journal-photo .carousel {
+    width: 100%;
+}
 
 .journal-photo .carousel img {
     width: unset;
