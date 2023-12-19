@@ -298,6 +298,10 @@ p {
   font-size: 0.75rem;
 }
 
+.journal-section {
+    width: 100%;
+}
+
 .journal-photo {
   max-width: 32rem;
   margin-top: 1rem;
@@ -306,9 +310,6 @@ p {
 .journal-photo img {
   width: 100%;
   border-radius: 1rem;
-}
-.journal-photo .carousel {
-    width: 100%;
 }
 
 .journal-photo .carousel img {
