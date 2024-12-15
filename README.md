@@ -1,6 +1,6 @@
 # website
 
-it's a free for all...
+Ian and Cindy use this site for Christmas Cards
 
 ## getting started
 

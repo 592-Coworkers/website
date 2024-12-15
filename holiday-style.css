@@ -299,7 +299,7 @@ p {
 }
 
 .journal-section {
-    width: 100%;
+  width: 100%;
 }
 
 .journal-photo {
@@ -313,11 +313,11 @@ p {
 }
 
 .journal-photo .carousel {
-    width: 100%;
+  width: 100%;
 }
 
 .journal-photo .carousel img {
-    width: unset;
+  width: unset;
 }
 
 .journal-photo .caption {
@@ -328,13 +328,12 @@ p {
 }
 
 .video-embed {
-    max-width: 32rem;
-    width: 100%;
-    min-height: 16rem;
-    margin-top: 1rem;
-    border-radius: 1rem;
+  max-width: 32rem;
+  width: 100%;
+  min-height: 16rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
 }
-
 
 .carousel {
   display: flex;
@@ -350,4 +349,9 @@ p {
 .carousel img {
   height: 24rem;
   border-radius: 0.5rem;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black !important;
 }
