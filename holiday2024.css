@@ -10,10 +10,7 @@
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  font-variation-settings:
-    "BNCE" 30,
-    "INFM" 50,
-    "SPAC" 0;
+  font-variation-settings: "BNCE" 30, "INFM" 50, "SPAC" 0;
 }
 
 /* Reusable classes */
@@ -36,6 +33,10 @@
 
 .full-width {
   width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 .content-block {
@@ -310,7 +311,7 @@ p {
 }
 
 .journal-section {
-    width: 100%;
+  width: 100%;
 }
 
 .journal-photo {
@@ -324,11 +325,11 @@ p {
 }
 
 .journal-photo .carousel {
-    width: 100%;
+  width: 100%;
 }
 
 .journal-photo .carousel img {
-    width: unset;
+  width: unset;
 }
 
 .journal-photo .caption {
@@ -339,13 +340,12 @@ p {
 }
 
 .video-embed {
-    max-width: 32rem;
-    width: 100%;
-    min-height: 16rem;
-    margin-top: 1rem;
-    border-radius: 1rem;
+  max-width: 32rem;
+  width: 100%;
+  min-height: 16rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
 }
-
 
 .carousel {
   display: flex;
