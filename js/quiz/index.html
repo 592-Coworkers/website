@@ -9,13 +9,12 @@
       content="Happy holidays from Cindy & Ian!"
     />
     <meta property="og:type" content="blog" />
-    <title>coming soon</title>
+    <title>quiz</title>
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="/holiday2023.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital@0;1&family=Shantell+Sans:ital,wght,BNCE,INFM@0,300..800,-100..100,50;1,300..800,-100..100,50&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
     <!-- Favicons -->
@@ -24,21 +23,37 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c10f17" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+    />
     <meta name="msapplication-TileColor" content="#263727" />
     <meta name="theme-color" content="#ffffff" />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-    <script src="/js/index.js" type="module" defer></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./index.js" type="module" defer></script>
   </head>
   <body>
-    <!-- <nav></nav> -->
-    <main>
-      <button id="snow-fab" aria-label="let it snow">
-        <img src="assets/snowflake.svg" alt="snowflake" />
-      </button>
-      <!-- Snowflake by Dilon Choudhury from Noun Project (CC BY 3.0) https://thenounproject.com/browse/icons/term/snowflake/  -->
-      <section id="hero" class="full-width">
-        <h1 id="greeting" class="content-block partial-width">coming soon</h1>
-      </section>
-    </main>
-  </body>
+    <div
+      id="app"
+    ></div>
 </html>

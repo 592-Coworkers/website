@@ -1,6 +1,6 @@
 <script setup>
 import { computed, onMounted, ref } from "vue"
-import { hideQuizApp } from "../holiday2024"
+// import { hideQuizApp } from "../holiday2024"
 import { questions } from "./questions"
 import { scores } from "./scores"
 
@@ -74,10 +74,10 @@ function resetQuiz() {
         <button @click="hideQuizApp">close</button>
       </div>
       <div>
-        <img
+        <!-- <img
           style="height: 10rem"
           src="/assets/year-in-photos/events/02-cny.jpg"
-        />
+        /> -->
       </div>
       <template v-if="question">
         <div>
