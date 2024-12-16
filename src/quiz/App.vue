@@ -1,6 +1,6 @@
 <script setup>
 import { computed, onMounted, ref } from "vue"
-import { hideQuizApp } from "../holiday-2024"
+import { hideQuizApp } from "../holiday2024"
 import { questions } from "./questions"
 import { scores } from "./scores"
 
