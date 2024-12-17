@@ -4,6 +4,7 @@ import App from "./quiz/App.vue"
 const quizApp = document.querySelector("#quiz-app")
 const snowFAB = document.querySelector("#snow-fab")
 const quizButton = document.querySelector("#quiz-button")
+const closeQuizButton = document.querySelector("#close-quiz-button")
 
 function snowSome() {
   confetti({
@@ -23,15 +24,16 @@ function snowSome() {
 
 function showQuizApp() {
   quizApp.classList.remove("hidden")
+  closeQuizButton.classList.remove("hidden")
 }
 
 function hideQuizApp() {
   quizApp.classList.add("hidden")
+  closeQuizButton.classList.add("hidden")
 }
 
-const app = createApp(App).mount("#quiz-app")
+createApp(App).mount("#quiz-app")
 
 snowFAB.addEventListener("click", snowSome)
 quizButton.addEventListener("click", showQuizApp)
-
-export { hideQuizApp }
+closeQuizButton.addEventListener("click", hideQuizApp)

@@ -86,6 +86,10 @@ body {
   }
 }
 
+html {
+  height: 100vh;
+}
+
 main {
   margin: 0;
 }

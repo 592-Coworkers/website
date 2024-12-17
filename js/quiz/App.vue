@@ -58,7 +58,7 @@ function resetQuiz() {
       background-color: #182841;
       pointer-events: all;
       overflow-y: scroll;
-      padding-top: 4rem;
+      justify-content: center;
     "
   >
     <div
@@ -67,11 +67,12 @@ function resetQuiz() {
         flex-direction: column;
         width: 100%;
         align-items: center;
+        margin-top: 3rem;
+        max-width: 32rem;
       "
     >
       <div style="display: flex; flex-direction: row">
         <h1>Which 2024 Ian or Cindy are you?</h1>
-        <button @click="hideQuizApp">close</button>
       </div>
       <div>
         <!-- <img

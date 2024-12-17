@@ -64,9 +64,15 @@
         style="display: flex; justify-content: center; padding-top: 4rem"
       >
         <button id="quiz-button">Take the quiz</button>
-        <button>CLOSE</button>
       </section>
     </main>
+    <button
+      id="close-quiz-button"
+      style="position: absolute; z-index: 200; top: 10; right: -2"
+      class="hidden"
+    >
+      ×
+    </button>
     <div
       id="quiz-app"
       style="
@@ -77,9 +83,9 @@
         top: 0;
         left: 0;
         pointer-events: none;
+        z-index: 100;
       "
       class="hidden"
     ></div>
-    <button>CLOSe</button>
   </body>
 </html>
