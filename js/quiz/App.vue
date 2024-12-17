@@ -1,6 +1,5 @@
 <script setup>
-import { computed, onMounted, ref } from "vue"
-// import { hideQuizApp } from "../holiday2024"
+import { computed, ref } from "vue"
 import { questions } from "./questions"
 import { scores } from "./scores"
 
@@ -59,7 +58,7 @@ function resetQuiz() {
   <div
     style="
       width: 100%;
-      height: 100%;
+      height: 100vh;
       display: flex;
       background-color: #182841;
       pointer-events: all;
@@ -133,7 +132,7 @@ function resetQuiz() {
   </div>
 </template>
 
-<style scoped>
+<style>
 .selected {
   background-color: red;
 }
