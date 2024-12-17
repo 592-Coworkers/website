@@ -77,7 +77,7 @@ function resetQuiz() {
       <div>
         <!-- <img
           style="height: 10rem"
-          src="/assets/year-in-photos/events/02-cny.jpg"
+          src="/assets-2023/year-in-photos/events/02-cny.jpg"
         /> -->
       </div>
       <template v-if="question">

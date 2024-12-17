@@ -1,29 +1,40 @@
 :root {
-  --near-black: #121814;
-  --pine: #263727;
-  --brick: #701716;
-  --crimson: #c10f17;
-}
+  --midnight: #0B121C;
+  --night-sky: #182841;
+  --twilight: #2B4867;
+  --cloud: #FCF8FA;
 
-.oh-deer-font {
-  font-family: "Shantell Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 800;
-  font-style: normal;
-  font-variation-settings: "BNCE" 30, "INFM" 50, "SPAC" 0;
+  --night-sky-80: rgba(24, 40, 65, 0.80);
+
+  --rudolph: #C7202D;
+  --brick: #A11F25;
+
+  --gold-star: #CBB571;
+  --reindeer: #B15F28;
+  --bark: #624524;
+  --dust: #7C6E6A;
 }
 
 /* Reusable classes */
-.bg-pine {
-  background: var(--pine);
+
+.font-shantell-sans {
+    font-family: "Shantell Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "BNCE" 30, "INFM" 50, "SPAC" 0;
+  }
+
+.bg-midnight {
+  background: var(--midnight);
 }
 
-.bg-dark {
-  background: var(--near-black);
+.bg-night-sky {
+  background: var(--night-sky);
 }
 
-.bg-brick {
-  background: var(--brick);
+.bg-twilight {
+  background: var(--twilight);
 }
 
 .partial-width {
@@ -51,21 +62,21 @@
 
 /* specific elements */
 body {
-  background-color: var(--pine);
+  background-color: var(--night-sky);
   color: white;
-  font-family: "Volkhov", serif;
+  font-family: "Inclusive Sans", sans-serif;
   margin: 0;
   text-align: center;
 }
 
 #snow-fab {
-  background: var(--crimson);
-  padding: 0.75rem;
-  border-radius: 6.25rem;
-  box-shadow: 0px 2px 24px 0px #fff;
+    font-size: 0.75rem;
+    color: var(--cloud);
+    background: var(--twilight);
+    box-shadow: 0px 4px 0px 0px var(--midnight);
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
   border: none;
-  height: 4.25rem;
-  width: 4.25rem;
   position: fixed;
   bottom: 1.75rem;
   right: 1.75rem;
@@ -73,16 +84,19 @@ body {
 }
 
 #snow-fab:active {
-  background: var(--brick);
+  /* background: var(--night-sky); */
+  box-shadow: 0px 8px 0px 0px var(--midnight);
   transition: 0.2s;
   cursor: pointer;
 }
 
 @media (hover: hover) {
   #snow-fab:hover {
-    background: var(--brick);
-    transition: 0.2s;
+    background: linear-gradient(0deg, var(--night-sky-80) 0%, var(--night-sky-80) 100%), var(--twilight, #2B4867);
+  box-shadow: 0px 8px 0px 0px var(--midnight);
+    transition: 0.5s;
     cursor: pointer;
+    bottom: 2rem;
   }
 }
 
@@ -104,6 +118,11 @@ h3 {
   font-size: 1rem;
   font-weight: 400;
   margin-block: 0;
+  font-family: "Shantell Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "BNCE" 30, "INFM" 50, "SPAC" 0;
 }
 
 ul {
@@ -147,7 +166,7 @@ footer {
 }
 
 .hero-banner {
-  background-image: url("assets/hero.jpg");
+  background-image: url("assets-2023/hero.jpg");
   background-repeat: repeat-x;
   background-size: contain;
   background-position: center;
@@ -164,136 +183,6 @@ footer {
 
 #greeting img {
   max-width: 70%;
-}
-
-/* #community {
-} */
-
-#add-note,
-#submit {
-  font-family: "Volkhov", serif;
-  font-weight: 700;
-  font-size: 1rem;
-  width: 100%;
-  max-width: 32rem;
-  padding: 1rem 1.5rem;
-  border-radius: 6.25rem;
-  background: var(--near-black);
-  color: white;
-  border: none;
-  box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.35);
-}
-
-#add-note:hover,
-#add-note:active,
-#submit:hover,
-#submit:active {
-  background: var(--pine);
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-#comment-list {
-  display: flex;
-  flex-direction: column;
-  align-self: stretch;
-  width: 100%;
-  gap: 1rem;
-}
-
-.comment {
-  display: flex;
-  padding: 1rem 2rem;
-  background: white;
-  border-radius: 3rem;
-  box-shadow: 0px 0px 4px 0px rgba(18, 24, 20, 0.35);
-  color: var(--pine);
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.25rem;
-  flex-grow: 1;
-}
-
-.comment-name {
-  text-align: left;
-  font-style: italic;
-  align-self: stretch;
-}
-
-.comment-message {
-  text-align: left;
-  align-self: stretch;
-}
-
-/* Modal stuff */
-#comment-modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  padding: 2rem 1rem;
-  box-sizing: border-box;
-  z-index: 101;
-}
-
-.modal-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: flex-start;
-  width: 100%;
-}
-
-.modal-content form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: flex-start;
-  width: 100%;
-}
-
-.modal-content form > * {
-  align-self: stretch;
-}
-
-.modal-content form input,
-.modal-content form textarea {
-  font-family: "Volkhov", serif;
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  background: #fff;
-  border: none;
-  box-shadow: 0px 0px 4px 0px rgba(18, 24, 20, 0.35);
-}
-
-.modal-content form input:focus-visible,
-.modal-content form textarea:focus-visible,
-button:focus {
-  outline: 1px dashed white;
-  outline-offset: 2px;
-}
-
-.modal-content form label {
-  text-align: left;
-  font-size: 0.75rem;
-}
-
-#close {
-  background: var(--near-black);
-  border: none;
-  border-radius: 6.25rem;
-  height: 3rem;
-  width: 3rem;
-  padding: 0;
-}
-
-#close:hover,
-#close:active {
-  background: var(--pine);
-  cursor: pointer;
 }
 
 /* cindy recap specific */
