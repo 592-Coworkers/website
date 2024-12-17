@@ -78,7 +78,7 @@ body {
   font-family: "Inclusive Sans", sans-serif;
   font-size: 0.875rem;
   margin: 0;
-  text-align: center;
+  text-align: left;
   height: 100%;
   width: 100%;
   display: flex;
@@ -92,57 +92,6 @@ main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-}
-
-#snow-fab {
-  font-size: 0.75rem;
-  background: var(--twilight);
-  box-shadow: 0px 4px 0px 0px var(--midnight);
-  padding: 0.75rem 1rem;
-  border-radius: 0.25rem;
-  border: none;
-  position: fixed;
-  bottom: 1.25rem;
-  right: 1.25rem;
-  transition: 0.2s;
-}
-
-#snow-fab:active {
-  /* background: var(--night-sky); */
-  box-shadow: 0px 8px 0px 0px var(--midnight);
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-
-@media (hover: hover) {
-  #snow-fab:hover {
-    background: linear-gradient(
-        0deg,
-        var(--night-sky-80) 0%,
-        var(--night-sky-80) 100%
-      ),
-      var(--twilight, #2b4867);
-    box-shadow: 0px 8px 0px 0px var(--midnight);
-    transition: 0.5s;
-    cursor: pointer;
-    bottom: 1.5rem;
-  }
-}
-
-@media (hover: hover) {
-  #snow-fab:hover {
-    background: linear-gradient(
-        0deg,
-        var(--night-sky-30) 0%,
-        var(--night-sky-80) 100%
-      ),
-      var(--twilight, #2b4867);
-    box-shadow: 0px 8px 0px 0px var(--midnight);
-    transition: 0.5s;
-    cursor: pointer;
-    bottom: 1.75rem;
-  }
 }
 
 .fit-height {
@@ -224,24 +173,70 @@ button {
     font-size: 1rem;
     border-radius: 0.25rem;
     border: none;
-    background: var(--rudolph);
-    box-shadow: 0px 4px 0px 0px var(--brick);
     color: var(--cloud);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.red-button {
+    background: var(--rudolph);
+    box-shadow: 0px 4px 0px 0px var(--brick);
+}
+
+.blue-button {
+    background: var(--twilight);
+    box-shadow: 0px 4px 0px 0px var(--midnight);
+}
+
+
+#snow-fab {
+    font-size: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    position: fixed;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    transition: 0.2s;
+  }
+  
+  #snow-fab:active {
+    transition: 0.2s;
+    cursor: pointer;
+    bottom: 1.5rem;
+
+  }
+  
+  
+  @media (hover: hover) {
+    .blue-button:hover {
+        background: linear-gradient(
+            0deg,
+            var(--night-sky-80) 0%,
+            var(--night-sky-80) 100%
+            ),
+            var(--twilight, #2b4867);
+        box-shadow: 0px 8px 0px 0px var(--midnight);
+        transition: 0.2s;
+    }
+    #snow-fab:hover {
+      cursor: pointer;
+      bottom: 1.5rem;
+    }
+  }
+
 #quiz-button {
 }
 
 #close-quiz-button {
-    background: var(--twilight);
-    box-shadow: 0px 4px 0px 0px var(--midnight);
     padding: 0.625rem;
     height: 2.5rem;
     width: 2.5rem;
     font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
 
 /* cindy recap specific */
