@@ -5,6 +5,7 @@ const quizApp = document.querySelector("#quiz-app")
 const snowFAB = document.querySelector("#snow-fab")
 const quizButton = document.querySelector("#quiz-button")
 const closeQuizButton = document.querySelector("#close-quiz-button")
+const documentBody = document.querySelector("body")
 
 function snowSome() {
   confetti({
@@ -25,11 +26,13 @@ function snowSome() {
 function showQuizApp() {
   quizApp.classList.remove("hidden")
   closeQuizButton.classList.remove("hidden")
+  documentBody.classList.add("no-scroll")
 }
 
 function hideQuizApp() {
   quizApp.classList.add("hidden")
   closeQuizButton.classList.add("hidden")
+  documentBody.classList.remove("no-scroll")
 }
 
 createApp(App).mount("#quiz-app")

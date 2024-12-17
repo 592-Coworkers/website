@@ -4,8 +4,8 @@
   --twilight: #2b4867;
   --cloud: #fcf8fa;
 
-  --night-sky-80: rgba(24, 40, 65, 0.80);
-  --night-sky-30: rgba(24, 40, 65, 0.30);
+  --night-sky-80: rgba(24, 40, 65, 0.8);
+  --night-sky-30: rgba(24, 40, 65, 0.3);
 
   --rudolph: #c7202d;
   --brick: #a11f25;
@@ -50,6 +50,10 @@
 
 .hidden {
   display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .content-block {
@@ -127,8 +131,13 @@ main {
 
 @media (hover: hover) {
   #snow-fab:hover {
-    background: linear-gradient(0deg, var(--night-sky-30) 0%, var(--night-sky-80) 100%), var(--twilight, #2B4867);
-  box-shadow: 0px 8px 0px 0px var(--midnight);
+    background: linear-gradient(
+        0deg,
+        var(--night-sky-30) 0%,
+        var(--night-sky-80) 100%
+      ),
+      var(--twilight, #2b4867);
+    box-shadow: 0px 8px 0px 0px var(--midnight);
     transition: 0.5s;
     cursor: pointer;
     bottom: 1.75rem;
@@ -276,7 +285,7 @@ p {
 }
 
 @media only screen and (max-width: 480px) {
-    .partial-width {
-        border-radius: 0rem;
-    }
+  .partial-width {
+    border-radius: 0rem;
+  }
 }
