@@ -50,12 +50,22 @@
 }
 
 /* specific elements */
+html {
+  height: 100vh;
+}
+
 body {
   background-color: var(--pine);
   color: white;
   font-family: "Volkhov", serif;
   margin: 0;
   text-align: center;
+  height: 100%;
+  display: flex;
+}
+
+main {
+  margin: 0;
 }
 
 #snow-fab {
@@ -84,14 +94,6 @@ body {
     transition: 0.2s;
     cursor: pointer;
   }
-}
-
-html {
-  height: 100vh;
-}
-
-main {
-  margin: 0;
 }
 
 .fit-height {
