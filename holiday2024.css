@@ -1,29 +1,29 @@
 :root {
-  --midnight: #0B121C;
+  --midnight: #0b121c;
   --night-sky: #182841;
-  --twilight: #2B4867;
-  --cloud: #FCF8FA;
+  --twilight: #2b4867;
+  --cloud: #fcf8fa;
 
-  --night-sky-80: rgba(24, 40, 65, 0.80);
+  --night-sky-80: rgba(24, 40, 65, 0.8);
 
-  --rudolph: #C7202D;
-  --brick: #A11F25;
+  --rudolph: #c7202d;
+  --brick: #a11f25;
 
-  --gold-star: #CBB571;
-  --reindeer: #B15F28;
+  --gold-star: #cbb571;
+  --reindeer: #b15f28;
   --bark: #624524;
-  --dust: #7C6E6A;
+  --dust: #7c6e6a;
 }
 
 /* Reusable classes */
 
 .font-shantell-sans {
-    font-family: "Shantell Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-variation-settings: "BNCE" 30, "INFM" 50, "SPAC" 0;
-  }
+  font-family: "Shantell Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "BNCE" 30, "INFM" 50, "SPAC" 0;
+}
 
 .bg-midnight {
   background: var(--midnight);
@@ -72,18 +72,25 @@ body {
   margin: 0;
   text-align: center;
   height: 100%;
+  width: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main {
   margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 #snow-fab {
-    font-size: 0.75rem;
-    color: var(--cloud);
-    background: var(--twilight);
-    box-shadow: 0px 4px 0px 0px var(--midnight);
+  font-size: 0.75rem;
+  color: var(--cloud);
+  background: var(--twilight);
+  box-shadow: 0px 4px 0px 0px var(--midnight);
   padding: 0.75rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -102,8 +109,13 @@ main {
 
 @media (hover: hover) {
   #snow-fab:hover {
-    background: linear-gradient(0deg, var(--night-sky-80) 0%, var(--night-sky-80) 100%), var(--twilight, #2B4867);
-  box-shadow: 0px 8px 0px 0px var(--midnight);
+    background: linear-gradient(
+        0deg,
+        var(--night-sky-80) 0%,
+        var(--night-sky-80) 100%
+      ),
+      var(--twilight, #2b4867);
+    box-shadow: 0px 8px 0px 0px var(--midnight);
     transition: 0.5s;
     cursor: pointer;
     bottom: 2rem;
