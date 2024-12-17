@@ -1,6 +1,3 @@
-import { createApp } from "vue"
-import App from "./quiz/App.vue"
-
 const quizApp = document.querySelector("#quiz-app")
 const snowFAB = document.querySelector("#snow-fab")
 const quizButton = document.querySelector("#quiz-button")
@@ -34,8 +31,6 @@ function hideQuizApp() {
   closeQuizButton.classList.add("hidden")
   documentBody.classList.remove("no-scroll")
 }
-
-createApp(App).mount("#quiz-app")
 
 snowFAB.addEventListener("click", snowSome)
 quizButton.addEventListener("click", showQuizApp)
