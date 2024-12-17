@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:image" content="/assets-2023/preview.jpg" />
+    <meta property="og:image" content="/assets-2024/preview.jpg" />
     <meta
       property="og:description"
       content="Happy holidays from Cindy & Ian!"
     />
     <meta property="og:type" content="blog" />
-    <title>coming soon</title>
+    <title>holiday 2k24</title>
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="stylesheet" href="/holiday2023.css" />
+    <link rel="stylesheet" href="holiday2024.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,21 +24,93 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c10f17" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+    />
     <meta name="msapplication-TileColor" content="#263727" />
     <meta name="theme-color" content="#ffffff" />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-    <script src="/js/index.js" type="module" defer></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="/js/holiday2024.js" type="module" defer></script>
   </head>
   <body>
     <!-- <nav></nav> -->
     <main>
-      <button id="snow-fab" aria-label="let it snow">
-        <img src="assets-2023/snowflake.svg" alt="snowflake" />
-      </button>
-      <!-- Snowflake by Dilon Choudhury from Noun Project (CC BY 3.0) https://thenounproject.com/browse/icons/term/snowflake/  -->
-      <section id="hero" class="full-width">
-        <h1 id="greeting" class="content-block partial-width">coming soon</h1>
+      <section id="hero" class="partial-width">
+        <div id="greeting" class="content-block">
+          <h1>
+            <img src="assets-2024/oh-deer-text.png" alt="oh deer! the holidays are here!" />
+          </h1>
+          <p>
+            Hello from Cindy & Ian. More coming soon—check back in a few days!
+          </p>
+        </div>
+        <img
+          class="partial-width"
+          src="assets-2024/hero.jpg"
+          alt="cindy and ian with reindeer antlers"
+        />
       </section>
+      <button id="snow-fab" class="blue-button" aria-label="let it snow">
+        make it snow ❄
+      </button>
     </main>
+    <div
+      class="partial-width"
+      style="
+        width: 100%;
+        position: fixed;
+        top: 0;
+        pointer-events: none;
+        height: 50px;
+        z-index: 200;
+        isolation: isolate;
+        display: flex;
+        justify-content: end;
+      "
+    >
+      <button id="close-quiz-button" style="pointer-events: all" class="blue-button hidden">
+        ×
+      </button>
+    </div>
+    <div
+      id="quiz-app"
+      style="
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 100;
+      "
+      class="hidden"
+    ></div>
+    <footer class="bg-midnight partial-width">
+      Made in 2024
+      <br />
+      ♥️ love, cindy & ian
+    </footer>
   </body>
 </html>
