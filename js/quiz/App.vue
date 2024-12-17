@@ -6,6 +6,7 @@ import { scores } from "./scores"
 
 const questionId = ref(1)
 const answers = ref([])
+const selectedOption = ref(null)
 
 const question = computed(() => {
   if (questionId.value > questions.length) {
@@ -37,9 +38,14 @@ const result = computed(() => {
   return res
 })
 
-function handleOptionClick(event) {
-  const optionId = event.target.id
-  answers.value.push(optionId)
+function handleOptionClick(id) {
+  const optionId = id
+  selectedOption.value = optionId
+}
+
+function handleNextClick() {
+  answers.value.push(selectedOption.value)
+  selectedOption.value = null
   questionId.value++
 }
 
@@ -57,7 +63,7 @@ function resetQuiz() {
       display: flex;
       background-color: #182841;
       pointer-events: all;
-      overflow-y: scroll;
+      overflow-y: auto;
       justify-content: center;
     "
   >
@@ -91,18 +97,30 @@ function resetQuiz() {
         <div>
           <p>{{ question.textContent }}</p>
         </div>
-        <div style="display: flex; flex-direction: column">
-          <button
-            @click="handleOptionClick"
+        <ul style="display: flex; flex-direction: column">
+          <li
+            @click="handleOptionClick(option.id)"
             v-for="option of question.options"
             :id="option.id"
+            style="
+              padding: 1rem;
+              margin-top: 1rem;
+              border-radius: 0.5rem;
+              cursor: pointer;
+              list-style-type: none;
+            "
+            :class="`${
+              selectedOption === option.id ? 'selected' : 'unselected'
+            }`"
           >
             {{ option.textContent }}
+          </li>
+        </ul>
+        <div>
+          <button @click="handleNextClick" :disabled="selectedOption === null">
+            Next
           </button>
         </div>
-        <!-- <div>
-          <button>Next</button>
-        </div> -->
       </template>
       <template v-else>
         <div>
@@ -114,3 +132,12 @@ function resetQuiz() {
     </div>
   </div>
 </template>
+
+<style scoped>
+.selected {
+  background-color: red;
+}
+.unselected {
+  background-color: #111111;
+}
+</style>
