@@ -24,12 +24,14 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#c10f17" />
+
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/slick-carousel.css"/>
+
     <meta name="msapplication-TileColor" content="#263727" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#263727" />
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -44,25 +46,25 @@
         <!-- Snowflake by Dilon Choudhury from Noun Project (CC BY 3.0) https://thenounproject.com/browse/icons/term/snowflake/  -->
         <img src="assets-2023/snowflake.svg" alt="snowflake" />
       </button>
-      <section style="display: flex; justify-content: center; margin-top: 2rem; margin-bottom: 2rem; width: 100%;">
+      <section class="partial-width" >
 
-        <div style="width: 100%; max-width: 30rem;">
-            <div style="padding: 2rem; margin: 1rem; background-color: white;">
+        <div class="carousel-container"
+            style="background-color: white; margin: 0 0.5rem; padding: 1rem 1rem 3rem; border-radius: 0.25rem; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.60);">
                 <div class="slick-carousel">
-                    <div style="height: 30rem; width: 100%; display: flex; justify-content: center; align-items: center; background-color: black;">
+                    <div style="height: 30rem; width: 100%; display: flex; justify-content: center; align-items: center; background-color: white;">
                         <img style="width: 100%; height: 100%; object-fit: contain;" src="/assets-2023/year-in-photos/people/01-ziwei.jpeg" />
+                        caption
                     </div>
-                    <div style="height: 30rem; width: 100%; display: flex; justify-content: center; align-items: center; background-color: black;">
+                    <div style="height: 30rem; width: 100%; display: flex; justify-content: center; align-items: center; background-color: white;">
                         <img style="width: 100%; height: 100%; object-fit: contain;" src="/assets-2023/year-in-photos/people/03-aidan.jpg" />
                     </div>
-                    <div style="height: 30rem; width: 100%; display: flex; justify-content: center; align-items: center; background-color: black;">
+                    <div style="height: 30rem; width: 100%; display: flex; justify-content: center; align-items: center; background-color: white;">
                         <img style="width: 100%; height: 100%; object-fit: contain;" src="/assets-2023/year-in-photos/people/01-newyearbean.jpg" />
                     </div>
-                    <div style="height: 30rem; width: 100%; display: flex; justify-content: center; align-items: center; background-color: black;">
+                    <div style="height: 30rem; width: 100%; display: flex; justify-content: center; align-items: center; background-color: white;">
                         <img style="width: 100%; height: 100%; object-fit: contain;" src="/assets-2023/year-in-photos/people/06-grill2.jpg" />
                     </div>
                 </div>
-            </div>
         </div>
 
 

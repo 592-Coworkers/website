@@ -57,31 +57,40 @@
     <!-- <nav></nav> -->
     <main>
       <section id="hero" class="partial-width">
-        <div id="greeting">
-          <h1 class="content-block partial-width">
-            <img src="assets-2024/oh-deer-text.png" alt="text that says: oh deer! the holidays are here!" />
+        <div id="greeting" class="content-block">
+          <h1>
+            <img src="assets-2024/oh-deer-text.png" alt="oh deer! the holidays are here!" />
           </h1>
-          Hello from Cindy & Ian.
+          <p>
+            Hello from Cindy & Ian.
+          </p>
         </div>
-        <div class="hero-banner">
-          <img
-            class="partial-width"
-            src="assets-2024/hero.jpg"
-            alt="cindy and ian with reindeer antlers"
-          />
-        </div>
+        <img
+          class="partial-width"
+          src="assets-2024/hero.jpg"
+          alt="cindy and ian with reindeer antlers"
+        />
       </section>
       <button id="snow-fab" class="blue-button" aria-label="let it snow">
-        <!-- Snowflake by Dilon Choudhury from Noun Project (CC BY 3.0) https://thenounproject.com/browse/icons/term/snowflake/  -->
         make it snow ❄
       </button>
-      <section
-        style="display: flex; justify-content: center; padding-top: 4rem"
-      >
+      <section style="overflow-x:hidden;" class="partial-width">
+        <img
+          style="width: 110%; max-width: 36rem;"
+          src="assets-2024/polaroids.png"
+          alt="fake polaroids of cindy and ian jumping like flying reindeer"
+        />
+        <div class="content-block" style="padding: 1rem;">
+          <div>
+            <h2>Which 2024 Ian or Cindy are you??</h2>
+            <p style="text-align: center; margin-block-start: 0.5rem;">Learn about our year (and a little about yourself at the same time)</p>
+          </div>
         <button id="quiz-button" class="red-button">Take the quiz →</button>
+        </div>
       </section>
     </main>
     <div
+      class="partial-width"
       style="
         width: 100%;
         position: fixed;
@@ -91,7 +100,6 @@
         z-index: 200;
         isolation: isolate;
         display: flex;
-        max-width: 32rem;
         justify-content: end;
       "
     >
