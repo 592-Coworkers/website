@@ -64,26 +64,38 @@ function resetQuiz() {
       pointer-events: all;
       overflow-y: auto;
       justify-content: center;
+      color: white;
     "
+    class="font-inclusive-sans"
   >
     <div
       style="
         display: flex;
         flex-direction: column;
         width: 100%;
-        align-items: center;
-        margin-top: 3rem;
         max-width: 32rem;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 28px;
       "
     >
-      <div style="display: flex; flex-direction: row">
-        <h1>Which 2024 Ian or Cindy are you?</h1>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          margin-bottom: 25px;
+        "
+      >
+        <h2 class="font-shantell-sans" style="font-size: 14px">
+          Which 2024 Ian or Cindy are you?
+        </h2>
       </div>
       <div>
-        <!-- <img
-          style="height: 10rem"
-          src="/assets-2023/year-in-photos/events/02-cny.jpg"
-        /> -->
+        <img
+          style="width: 100%; border-radius: 4px"
+          src="https://592manhattan.com/assets-2023/cindy-recap-2023/06-camp2.JPG"
+        />
       </div>
       <template v-if="question">
         <div>
@@ -94,29 +106,65 @@ function resetQuiz() {
           </p>
         </div>
         <div>
-          <p>{{ question.textContent }}</p>
+          <p style="font-style: italic">{{ question.textContent }}</p>
         </div>
-        <ul style="display: flex; flex-direction: column">
+        <ul
+          style="display: flex; flex-direction: column; margin: 0; padding: 0"
+        >
           <li
             @click="handleOptionClick(option.id)"
             v-for="option of question.options"
-            :id="option.id"
+            :key="option.id"
             style="
-              padding: 1rem;
               margin-top: 1rem;
-              border-radius: 0.5rem;
+              border-radius: 4px;
               cursor: pointer;
               list-style-type: none;
+              position: relative;
+              isolation: isolate;
             "
             :class="`${
-              selectedOption === option.id ? 'selected' : 'unselected'
+              selectedOption === option.id
+                ? 'selected-border'
+                : 'unselected-border'
             }`"
           >
-            {{ option.textContent }}
+            <div
+              style="
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 100;
+              "
+              :class="`${
+                selectedOption === option.id ? 'selected' : 'unselected'
+              }`"
+            ></div>
+            <div
+              style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 100;
+                padding: 1rem;
+              "
+            >
+              <span>{{ option.textContent }}</span>
+            </div>
+            <div style="padding: 1rem">
+              <span>{{ option.textContent }}</span>
+            </div>
           </li>
         </ul>
         <div>
-          <button @click="handleNextClick" :disabled="selectedOption === null">
+          <button
+            @click="handleNextClick"
+            :disabled="selectedOption === null"
+            class="red-button"
+            style="width: 100%; margin-top: 20px; margin-bottom: 30px"
+          >
             Next
           </button>
         </div>
@@ -134,9 +182,74 @@ function resetQuiz() {
 
 <style>
 .selected {
-  background-color: red;
+  background-color: #c7202d;
+  opacity: 0.2;
+  border: 1px solid #c7202d;
 }
 .unselected {
-  background-color: #111111;
+  background-color: #0b121c;
+  opacity: 0.6;
+  border: 1px solid #2b4867;
+}
+
+.selected-border {
+  border: 1px solid #c7202d;
+}
+.unselected-border {
+  border: 1px solid #2b4867;
+}
+
+.font-shantell-sans {
+  font-family: "Shantell Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "BNCE" 30, "INFM" 50, "SPAC" 0;
+}
+
+.font-inclusive-sans {
+  font-family: "Inclusive Sans", sans-serif;
+}
+
+:root {
+  --midnight: #0b121c;
+  --night-sky: #182841;
+  --twilight: #2b4867;
+  --cloud: #fcf8fa;
+
+  --rudolph: #c7202d;
+  --brick: #871016;
+
+  --gold-star: #cbb571;
+  --reindeer: #b15f28;
+  --bark: #624524;
+  --dust: #7c6e6a;
+
+  --midnight-60: rgba(10, 18, 28, 0.6);
+  --night-sky-80: rgba(24, 40, 65, 0.8);
+  --night-sky-30: rgba(24, 40, 65, 0.3);
+  --brick-50: rgba(138, 15, 21, 0.5);
+}
+
+button {
+  padding: 0.75rem 1rem;
+  font-family: "Shantell Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "BNCE" 30, "INFM" 50, "SPAC" 0;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  color: var(--cloud);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+.red-button {
+  background: var(--rudolph);
+  box-shadow: 0px 4px 0px 0px var(--brick);
 }
 </style>
