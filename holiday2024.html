@@ -66,13 +66,24 @@
         <button id="quiz-button">Take the quiz</button>
       </section>
     </main>
-    <button
-      id="close-quiz-button"
-      style="position: absolute; z-index: 200; top: 10; right: -2"
-      class="hidden"
+    <div
+      style="
+        width: 100%;
+        position: absolute;
+        top: 0;
+        pointer-events: none;
+        height: 50px;
+        z-index: 200;
+        isolation: isolate;
+        display: flex;
+        max-width: 32rem;
+        justify-content: end;
+      "
     >
-      ×
-    </button>
+      <button id="close-quiz-button" style="pointer-events: all" class="hidden">
+        ×
+      </button>
+    </div>
     <div
       id="quiz-app"
       style="
