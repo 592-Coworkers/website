@@ -238,11 +238,12 @@ button:active {
 }
 
 @media (hover: hover) {
-  button:hover, .journal-button {
+  .blue-button:hover, .red-button:hover, .journal-button:hover {
     cursor: pointer;
     transform: translate(0px, -4px);
     transition: 0.5s;
   }
+  
   .blue-button:hover {
     background: linear-gradient(
         0deg,

@@ -16,6 +16,7 @@
     --night-sky-80: rgba(24, 40, 65, 0.8);
     --night-sky-30: rgba(24, 40, 65, 0.3);
     --brick-50: rgba(138, 15, 21, 0.5);
+    --gold-star-30: rgba(203, 180, 114, 0.3);
   }
 
 /* Arrows */
@@ -43,15 +44,21 @@
     border: none;
     outline: none;
     background: white;
-    opacity: 0.8;
+    box-shadow: 0px 4px 0px 0px var(--gold-star);
+    opacity: 1;
+    transition: .2s;
     z-index: 2;
 }
 .slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus
+.slick-next:hover
 {
+    background: linear-gradient(0deg, var(--gold-star-30) 0%, var(--gold-star-30) 100%),
+      white;
+      transition: .2s;
+      box-shadow: 0px 6px 0px 0px var(--gold-star);
+
     opacity: 1;
+    transform: translate(0, -20px);
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -60,15 +67,17 @@
 {
     opacity: 1;
 }
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled
 {
-    opacity: .25;
+    opacity: .3;
 }
 
 .slick-prev:before,
 .slick-next:before
 {
+    display: block;
+    
     font-family: 'Shantell sans', sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
