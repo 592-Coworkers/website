@@ -275,7 +275,6 @@ button {
 }
 
 .red-button:disabled {
-  background: #2b4867;
-  box-shadow: 0px 4px 0px 0px #2b4867;
+  opacity: .3;
 }
 </style>

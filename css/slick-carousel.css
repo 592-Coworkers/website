@@ -177,6 +177,8 @@
 .slick-dots li button:focus
 {
     outline: none;
+    transform: translate(0px, -4px);
+
 }
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before
