@@ -1,80 +1,132 @@
 export const scores = {
   1: {
     A: {
-      cat: 1,
-      dog: 2,
-      bird: 3,
-      fish: 4
+      friar: 0,
+      newyork: 0,
+      corn: 0,
+      pool: 0,
+      sleeping: 0,
+      lobster: 0,
+      squishy: 0,
+      sweater: 0,
+      time: 0,
+      retro: 0,
+      beach: 0,
+      reindeer: 0
     },
     B: {
-      cat: 2,
-      dog: 3,
-      bird: 4,
-      fish: 1
+      friar: 0,
+      newyork: 0,
+      corn: 0,
+      pool: 0,
+      sleeping: 0,
+      lobster: 0,
+      squishy: 0,
+      sweater: 0,
+      time: 0,
+      retro: 0,
+      beach: 0,
+      reindeer: 0
     },
     C: {
-      cat: 3,
-      dog: 4,
-      bird: 1,
-      fish: 2
+      friar: 0,
+      newyork: 0,
+      corn: 0,
+      pool: 0,
+      sleeping: 0,
+      lobster: 0,
+      squishy: 0,
+      sweater: 0,
+      time: 0,
+      retro: 0,
+      beach: 0,
+      reindeer: 0
     },
     D: {
-      cat: 4,
-      dog: 1,
-      bird: 2,
-      fish: 3
+      friar: 0,
+      newyork: 0,
+      corn: 0,
+      pool: 0,
+      sleeping: 0,
+      lobster: 0,
+      squishy: 0,
+      sweater: 0,
+      time: 0,
+      retro: 0,
+      beach: 0,
+      reindeer: 0
     }
   },
   2: {
     A: {
-      cat: 1,
-      dog: 2,
-      bird: 3,
-      fish: 4
+      friar: 0,
+      newyork: 0,
+      corn: 0,
+      pool: 0,
+      sleeping: 0,
+      lobster: 0,
+      squishy: 0,
+      sweater: 0,
+      time: 0,
+      retro: 0,
+      beach: 0,
+      reindeer: 0
     },
     B: {
-      cat: 2,
-      dog: 3,
-      bird: 4,
-      fish: 1
+      friar: 0,
+      newyork: 0,
+      corn: 0,
+      pool: 0,
+      sleeping: 0,
+      lobster: 0,
+      squishy: 0,
+      sweater: 0,
+      time: 0,
+      retro: 0,
+      beach: 0,
+      reindeer: 0
     },
     C: {
-      cat: 3,
-      dog: 4,
-      bird: 1,
-      fish: 2
+      friar: 0,
+      newyork: 0,
+      corn: 0,
+      pool: 0,
+      sleeping: 0,
+      lobster: 0,
+      squishy: 0,
+      sweater: 0,
+      time: 0,
+      retro: 0,
+      beach: 0,
+      reindeer: 0
     },
     D: {
-      cat: 4,
-      dog: 1,
-      bird: 2,
-      fish: 3
-    }
-  },
-  3: {
-    A: {
-      cat: 1,
-      dog: 2,
-      bird: 3,
-      fish: 4
+      friar: 0,
+      newyork: 0,
+      corn: 0,
+      pool: 0,
+      sleeping: 0,
+      lobster: 0,
+      squishy: 0,
+      sweater: 0,
+      time: 0,
+      retro: 0,
+      beach: 0,
+      reindeer: 0
     },
-    B: {
-      cat: 2,
-      dog: 3,
-      bird: 4,
-      fish: 1
-    },
-    C: {
-      cat: 3,
-      dog: 4,
-      bird: 1,
-      fish: 2
-    },
-    D: {
-      cat: 4,
-      dog: 1,
-      bird: 2,
-      fish: 3
+    E: {
+      friar: 0,
+      newyork: 0,
+      corn: 0,
+      pool: 0,
+      sleeping: 0,
+      lobster: 0,
+      squishy: 0,
+      sweater: 0,
+      time: 0,
+      retro: 0,
+      beach: 0,
+      reindeer: 0
     }
   }
 }

@@ -24,12 +24,20 @@ const result = computed(() => {
   const results = { cat: 0, dog: 0, bird: 0, fish: 0 }
   answers.value.forEach((answer, index) => {
     const r = scores[index + 1][answer]
-    results.cat += r.cat
-    results.dog += r.dog
-    results.bird += r.bird
-    results.fish += r.fish
+    results.friar += r.friar
+    results.newyork += r.newyork
+    results.corn += r.corn
+    results.pool += r.pool
+    results.sleeping += r.sleeping
+    results.lobster += r.lobster
+    results.squishy += r.squishy
+    results.sweater += r.sweater
+    results.time += r.time
+    results.retro += r.retro
+    results.beach += r.beach
+    results.reindeer += r.reindeer
   })
-  let res = "cat"
+  let res = "friar"
   console.log(results)
   Object.entries(results).forEach(([key, value]) => {
     if (value > results[res]) {
