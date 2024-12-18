@@ -12,7 +12,7 @@
   --bark: #624524;
   --dust: #7c6e6a;
 
-  --midnight-60: rgba(10, 18, 28, .6);
+  --midnight-60: rgba(10, 18, 28, 0.6);
   --night-sky-80: rgba(24, 40, 65, 0.8);
   --night-sky-30: rgba(24, 40, 65, 0.3);
   --brick-50: rgba(138, 15, 21, 0.5);
@@ -41,7 +41,7 @@
 }
 
 .partial-width {
-    width: 100%;
+  width: 100%;
   max-width: 32rem;
   margin: 0 auto;
   border-radius: 0.5rem;
@@ -57,6 +57,10 @@
 
 .no-scroll {
   overflow: hidden;
+}
+
+.no-pointer-events {
+  pointer-events: none;
 }
 
 .content-block {
@@ -97,12 +101,12 @@ main {
 }
 
 section {
-    padding: 2rem 0rem;
-    display: flex; 
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+  padding: 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .fit-height {
@@ -176,84 +180,79 @@ footer {
 }
 
 button {
-    padding: 0.75rem 1rem;
-    font-family: "Shantell Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-variation-settings: "BNCE" 30, "INFM" 50, "SPAC" 0;
-    font-size: 1rem;
-    border-radius: 0.25rem;
-    border: none;
-    color: var(--cloud);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.5s;
+  padding: 0.75rem 1rem;
+  font-family: "Shantell Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "BNCE" 30, "INFM" 50, "SPAC" 0;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  color: var(--cloud);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
 }
 
 .red-button {
-    background: var(--rudolph);
-    box-shadow: 0px 4px 0px 0px var(--brick);
+  background: var(--rudolph);
+  box-shadow: 0px 4px 0px 0px var(--brick);
 }
 
 .blue-button {
-    background: var(--twilight);
-    box-shadow: 0px 4px 0px 0px var(--midnight);
+  background: var(--twilight);
+  box-shadow: 0px 4px 0px 0px var(--midnight);
 }
 
 #snow-fab {
-    font-size: 0.75rem;
-    padding: 0.75rem 1rem;
-    position: fixed;
-    bottom: 1.25rem;
-    right: 1.25rem;
-  }
+  font-size: 0.75rem;
+  padding: 0.75rem 1rem;
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+}
 
-  button:active {
+button:active {
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  button:hover {
     cursor: pointer;
+    transform: translate(0px, -4px);
+    transition: 0.5s;
   }
-  
-  
-  @media (hover: hover) {
-    button:hover {
-        cursor: pointer;
-        transform: translate(0px, -4px);
-        transition: 0.5s;
-    }
-    .blue-button:hover {
-        background: linear-gradient(
-            0deg,
-            var(--night-sky-30) 0%,
-            var(--night-sky-30) 100%
-            ),
-            var(--twilight);
-        box-shadow: 0px 8px 0px 0px var(--midnight);
-        transition: 0.2s;
-    }
+  .blue-button:hover {
+    background: linear-gradient(
+        0deg,
+        var(--night-sky-30) 0%,
+        var(--night-sky-30) 100%
+      ),
+      var(--twilight);
+    box-shadow: 0px 8px 0px 0px var(--midnight);
+    transition: 0.2s;
+  }
 
-    .red-button:hover {
-        background:  linear-gradient(
-            0deg,
-            var(--brick-50) 0%,
-            var(--brick-50) 100%
-            ),
-            var(--rudolph);
-        box-shadow: 0px 8px 0px 0px var(--brick);
-    }
+  .red-button:hover {
+    background: linear-gradient(0deg, var(--brick-50) 0%, var(--brick-50) 100%),
+      var(--rudolph);
+    box-shadow: 0px 8px 0px 0px var(--brick);
   }
+}
 
 #quiz-button {
 }
 
 #close-quiz-button {
-    padding: 0.625rem;
-    height: 2.5rem;
-    width: 2.5rem;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+  padding: 0.625rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 /* cindy recap specific */
@@ -262,12 +261,12 @@ button {
 }
 
 p {
-    font-size: 0.875rem;
-    line-height: 140%;
-    margin-block-start: 1rem;
-    margin-block-end: 0;
-    text-align: left;
-    width: 100%;
+  font-size: 0.875rem;
+  line-height: 140%;
+  margin-block-start: 1rem;
+  margin-block-end: 0;
+  text-align: left;
+  width: 100%;
 }
 
 #journal h2 {
@@ -312,11 +311,11 @@ p {
 }
 
 .carousel-container {
-    background-color: white; 
-    margin: 0 0.5rem; 
-    padding: 1rem 1rem 3rem; 
-    border-radius: 0.25rem; 
-    box-shadow: 0px 4px 4px 0px var(--midnight-60);
+  background-color: white;
+  margin: 0 0.5rem;
+  padding: 1rem 1rem 3rem;
+  border-radius: 0.25rem;
+  box-shadow: 0px 4px 4px 0px var(--midnight-60);
 }
 
 .carousel {

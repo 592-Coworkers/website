@@ -24,12 +24,14 @@ function showQuizApp() {
   quizApp.classList.remove("hidden")
   closeQuizButton.classList.remove("hidden")
   documentBody.classList.add("no-scroll")
+  quizApp.classList.remove("no-pointer-events")
 }
 
 function hideQuizApp() {
   quizApp.classList.add("hidden")
   closeQuizButton.classList.add("hidden")
   documentBody.classList.remove("no-scroll")
+  quizApp.classList.add("no-pointer-events")
 }
 
 snowFAB.addEventListener("click", snowSome)
