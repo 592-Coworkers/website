@@ -113,9 +113,7 @@ function resetQuiz() {
         </div>
         <div>
           <p>
-            This year was our 5 year college reunion at Cornell. We spent the
-            weekend in Ithaca catching up with friends and participating in some
-            Big Red activities.
+            {{ question.introTextContent }}
           </p>
         </div>
         <div>
@@ -275,6 +273,6 @@ button {
 }
 
 .red-button:disabled {
-  opacity: .3;
+  opacity: 0.3;
 }
 </style>
