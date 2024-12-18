@@ -1,11 +1,8 @@
+const quizApp = document.querySelector("#quiz-app")
 const snowFAB = document.querySelector("#snow-fab")
-const commentList = document.querySelector("#comment-list")
-const nameInput = document.querySelector("#name")
-const messageInput = document.querySelector("#message")
-const commentForm = document.querySelector("form")
-const modal = document.getElementById("comment-modal")
-const btn = document.getElementById("add-note")
-const back = document.getElementById("close")
+const quizButton = document.querySelector("#quiz-button")
+const closeQuizButton = document.querySelector("#close-quiz-button")
+const documentBody = document.querySelector("body")
 
 function snowSome() {
   confetti({
@@ -23,4 +20,20 @@ function snowSome() {
   })
 }
 
+function showQuizApp() {
+  quizApp.classList.remove("hidden")
+  closeQuizButton.classList.remove("hidden")
+  documentBody.classList.add("no-scroll")
+  quizApp.classList.remove("no-pointer-events")
+}
+
+function hideQuizApp() {
+  quizApp.classList.add("hidden")
+  closeQuizButton.classList.add("hidden")
+  documentBody.classList.remove("no-scroll")
+  quizApp.classList.add("no-pointer-events")
+}
+
 snowFAB.addEventListener("click", snowSome)
+quizButton.addEventListener("click", showQuizApp)
+closeQuizButton.addEventListener("click", hideQuizApp)

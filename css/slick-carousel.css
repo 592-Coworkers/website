@@ -120,10 +120,10 @@
 }
 
 /* Dots */
-.slick-dotted.slick-slider
+/* .slick-dotted.slick-slider
 {
-    /* margin-bottom: 1rem; */
-}
+    margin-bottom: 1rem;
+} */
 
 .slick-dots
 {
@@ -177,6 +177,8 @@
 .slick-dots li button:focus
 {
     outline: none;
+    transform: translate(0px, -4px);
+
 }
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before
