@@ -21,7 +21,20 @@ const result = computed(() => {
   if (answers.value.length < questions.length) {
     return null
   }
-  const results = { cat: 0, dog: 0, bird: 0, fish: 0 }
+  const results = {
+    friar: 0,
+    newyork: 0,
+    corn: 0,
+    pool: 0,
+    sleeping: 0,
+    lobster: 0,
+    squishy: 0,
+    twihard: 0,
+    time: 0,
+    retro: 0,
+    beach: 0,
+    reindeer: 0
+  }
   answers.value.forEach((answer, index) => {
     const r = scores[index + 1][answer]
     results.friar += r.friar
@@ -31,7 +44,7 @@ const result = computed(() => {
     results.sleeping += r.sleeping
     results.lobster += r.lobster
     results.squishy += r.squishy
-    results.sweater += r.sweater
+    results.twihard += r.twihard
     results.time += r.time
     results.retro += r.retro
     results.beach += r.beach
@@ -49,6 +62,10 @@ const result = computed(() => {
 
 const persona = computed(() => {
   return personas[result.value]
+})
+
+const personaDescription = computed(() => {
+  return persona.value.description.split("\n")
 })
 
 function handleOptionClick(id) {
@@ -184,7 +201,9 @@ function resetQuiz() {
         <div>
           <img style="width: 100%; border-radius: 4px" :src="persona.image" />
           <p class="font-shantell-sans">You&apos;re {{ persona.name }}!</p>
-          <p>{{ persona.description }}</p>
+          <p v-for="paragraph of personaDescription" :key="paragraph">
+            {{ paragraph }}
+          </p>
           <button
             class="red-button"
             style="width: 100%; margin-bottom: 28px"

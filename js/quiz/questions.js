@@ -82,7 +82,7 @@ export const questions = [
   },
   {
     id: 4,
-    image: "https://592manhattan.com/assets-2024/quiz04.jpg",
+    image: "https://592manhattan.com/assets-2024/question04.jpg",
     introTextContent:
       "We went to a lot of concerts this year all over NYC. Some of the artists we saw were: Ed Sheeran, Jacob Collier, Khruangbin, Cheekface, and Scary Pockets.",
     textContent: "What will your soundtrack for 2025 be?",
@@ -111,10 +111,11 @@ export const questions = [
   },
   {
     id: 5,
-    image: "https://592manhattan.com/assets-2024/quiz05.jpg",
+    image: "https://592manhattan.com/assets-2024/question05.jpg",
     introTextContent:
       "When it comes to work, Ian & Cindy both made some moves this year. Cindy got promoted at Flex and returned to the office while Ian has been settling into his new Software Engineering role at SS&C.",
-    textContent: "We’ve been spending more time in the office. Where would we find you during your lunch break?",
+    textContent:
+      "We’ve been spending more time in the office. Where would we find you during your lunch break?",
     options: [
       {
         id: "A",
@@ -140,7 +141,7 @@ export const questions = [
   },
   {
     id: 6,
-    image: "https://592manhattan.com/assets-2024/quiz06.jpg",
+    image: "https://592manhattan.com/assets-2024/question06.jpg",
     introTextContent:
       "To beat the heat, we spent the summer at Rockaway Beach, grilling in the park, and going to the Cubs game in Chicago. Plus we ate a lot of ice cream.",
     textContent: "Pick an ice cream flavor that we had this year.",
@@ -173,14 +174,16 @@ export const questions = [
   },
   {
     id: 7,
-    image: "https://592manhattan.com/assets-2024/quiz07.jpg",
+    image: "https://592manhattan.com/assets-2024/question07.jpg",
     introTextContent:
       "Ian likes watching movies and learning about film. In 2024, he went to the theater with friends and even made YouTube videos about some of the films he watched.",
-    textContent: "Ian and Cindy have just invited you to a movie and asked for your input on what to see. What do you tell them?",
+    textContent:
+      "Ian and Cindy have just invited you to a movie and asked for your input on what to see. What do you tell them?",
     options: [
       {
         id: "A",
-        textContent: "“There’s a really sweet action movie I’ve been waiting to see. Let’s see that!”"
+        textContent:
+          "“There’s a really sweet action movie I’ve been waiting to see. Let’s see that!”"
       },
       {
         id: "B",
@@ -202,7 +205,7 @@ export const questions = [
   },
   {
     id: 8,
-    image: "https://592manhattan.com/assets-2024/quiz08.jpg",
+    image: "https://592manhattan.com/assets-2024/question08.jpg",
     introTextContent:
       "It’s the holidays after all! Ian & Cindy are spending Christmas and New Year’s in Chicago again.",
     textContent: "Pick a winter activity to round out the year :)",
@@ -217,7 +220,8 @@ export const questions = [
       },
       {
         id: "C",
-        textContent: "Drinking hot cocoa and watching a movie inside where it’s warm"
+        textContent:
+          "Drinking hot cocoa and watching a movie inside where it’s warm"
       },
       {
         id: "D",
