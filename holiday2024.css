@@ -129,7 +129,6 @@ section {
 p {
     font-size: 0.875rem;
     line-height: 140%;
-    margin-block-start: 0.25rem;
     margin-block-end: 0;
     width: 100%;
     margin-block-start: 0.5rem;
@@ -198,7 +197,7 @@ footer {
   max-width: 80%;
 }
 
-button {
+button, .journal-button {
   padding: 0.75rem 1rem;
   font-family: "Shantell Sans", sans-serif;
   font-optical-sizing: auto;
@@ -238,7 +237,7 @@ button:active {
 }
 
 @media (hover: hover) {
-  button:hover {
+  button:hover, .journal-button {
     cursor: pointer;
     transform: translate(0px, -4px);
     transition: 0.5s;
@@ -271,42 +270,7 @@ button:active {
   right: 1rem;
 }
 
-/* cindy recap specific */
-
-#journal p {
-  font-size: 0.875rem;
-  line-height: 140%;
-  margin-block-start: 1rem;
-  margin-block-end: 0;
-  text-align: left;
-  width: 100%;
-}
-
-#journal h2 {
-  font-size: 1rem;
-}
-
-.journal-section {
-  width: 100%;
-}
-
-.journal-photo {
-  max-width: 32rem;
-  margin-top: 1rem;
-}
-
-.journal-photo img {
-  width: 100%;
-  border-radius: 1rem;
-}
-
-.video-embed {
-  max-width: 32rem;
-  width: 100%;
-  min-height: 16rem;
-  margin-top: 1rem;
-  border-radius: 1rem;
-}
+/* carousel */
 
 .carousel-container {
     box-sizing: border-box;
@@ -315,7 +279,6 @@ button:active {
   border-radius: 0.25rem;
   box-shadow: 0px 4px 4px 0px var(--midnight-60);
 }
-
 
 .carousel-slide {
     width: 100%;
@@ -335,4 +298,42 @@ button:active {
 .caption {
     color: var(--midnight);
     padding-top: 1rem;
+}
+
+/* cindy recap specific */
+
+.journal p {
+  font-size: 0.875rem;
+  line-height: 140%;
+  margin-block-start: 1rem;
+  margin-block-end: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.journal-hero {
+    max-width: 24rem;
+  width: 80%;
+  background-color: var(--midnight-60);
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 6.5rem;
+  border-radius: 0.25rem;
+}
+
+.journal img {
+  width: 100%;
+  border-radius: 0.25rem;
+}
+
+.video-embed {
+  max-width: 32rem;
+  width: 100%;
+  min-height: 16rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
 }
