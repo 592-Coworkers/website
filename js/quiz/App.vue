@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from "vue"
+import { computed, ref, watch } from "vue"
 import { questions } from "./questions"
 import { scores } from "./scores"
 import { personas } from "./personas"
@@ -84,6 +84,19 @@ function resetQuiz() {
   questionId.value = 1
   answers.value = []
 }
+
+watch(result, () => {
+  if (result.value) {
+    console.log(persona.value)
+    fetch('https://hash.spudlocker.com/xmas/quiz', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ result: result.value, answers: answers.value }),
+    })
+  }
+})
 </script>
 
 <template>
