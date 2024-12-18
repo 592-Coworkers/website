@@ -230,6 +230,7 @@ button, .journal-button {
   position: fixed;
   bottom: 1.25rem;
   right: 1.25rem;
+  z-index: 99;
 }
 
 button:active {
@@ -292,7 +293,8 @@ button:active {
 }
 
 .carousel-slide img {
-  max-height: 26rem;
+    height: 100%;
+  max-height: 28rem;
   width: 100%;
   object-fit: contain;
 }
@@ -300,6 +302,7 @@ button:active {
 .caption {
     color: var(--midnight);
     padding-top: 1rem;
+    font-size: 0.75rem;
 }
 
 /* cindy recap specific */
