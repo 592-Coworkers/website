@@ -212,6 +212,7 @@ button, .journal-button {
   align-items: center;
   justify-content: center;
   transition: 0.5s;
+  touch-action: manipulation;
 }
 
 .red-button {
