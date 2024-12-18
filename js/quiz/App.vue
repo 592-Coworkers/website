@@ -2,10 +2,12 @@
 import { computed, ref } from "vue"
 import { questions } from "./questions"
 import { scores } from "./scores"
+import { personas } from "./personas"
 
 const questionId = ref(1)
 const answers = ref([])
 const selectedOption = ref(null)
+const myDiv = ref(null)
 
 const question = computed(() => {
   if (questionId.value > questions.length) {
@@ -37,6 +39,10 @@ const result = computed(() => {
   return res
 })
 
+const persona = computed(() => {
+  return personas[result.value]
+})
+
 function handleOptionClick(id) {
   const optionId = id
   selectedOption.value = optionId
@@ -46,6 +52,7 @@ function handleNextClick() {
   answers.value.push(selectedOption.value)
   selectedOption.value = null
   questionId.value++
+  myDiv.value.scrollTop = 0
 }
 
 function resetQuiz() {
@@ -66,6 +73,7 @@ function resetQuiz() {
       justify-content: center;
       color: white;
     "
+    ref="myDiv"
     class="font-inclusive-sans"
   >
     <div
@@ -76,7 +84,7 @@ function resetQuiz() {
         max-width: 32rem;
         margin-left: 16px;
         margin-right: 16px;
-        margin-top: 28px;
+        margin-top: 16px;
       "
     >
       <div
@@ -91,13 +99,10 @@ function resetQuiz() {
           Which 2024 Ian or Cindy are you?
         </h2>
       </div>
-      <div>
-        <img
-          style="width: 100%; border-radius: 4px"
-          src="https://592manhattan.com/assets-2023/cindy-recap-2023/06-camp2.JPG"
-        />
-      </div>
       <template v-if="question">
+        <div>
+          <img style="width: 100%; border-radius: 4px" :src="question.image" />
+        </div>
         <div>
           <p>
             This year was our 5 year college reunion at Cornell. We spent the
@@ -171,9 +176,16 @@ function resetQuiz() {
       </template>
       <template v-else>
         <div>
-          <p>Thank you for participating in the quiz! Your result is</p>
-          <p>{{ result }}</p>
-          <button @click="resetQuiz">Go again</button>
+          <img style="width: 100%; border-radius: 4px" :src="persona.image" />
+          <p class="font-shantell-sans">You&apos;re {{ persona.name }}!</p>
+          <p>{{ persona.description }}</p>
+          <button
+            class="red-button"
+            style="width: 100%; margin-bottom: 28px"
+            @click="resetQuiz"
+          >
+            Try again
+          </button>
         </div>
       </template>
     </div>
@@ -249,7 +261,13 @@ button {
 }
 
 .red-button {
+  cursor: pointer;
   background: var(--rudolph);
   box-shadow: 0px 4px 0px 0px var(--brick);
+}
+
+.red-button:disabled {
+  background: #2b4867;
+  box-shadow: 0px 4px 0px 0px #2b4867;
 }
 </style>

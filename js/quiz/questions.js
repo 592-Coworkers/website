@@ -1,7 +1,7 @@
 export const questions = [
   {
     id: 1,
-    image: "",
+    image: "https://592manhattan.com/assets-2024/hero.jpg",
     introTextContent:
       "This year was our 5 year college reunion at Cornell. We spent a summer weekend in Ithaca catching up with friends and participating in some Big Red activities.",
     textContent: "Which would be your go-to activity at reunion?",
@@ -28,7 +28,7 @@ export const questions = [
   },
   {
     id: 2,
-    image: "",
+    image: "https://592manhattan.com/assets-2024/hero.jpg",
     introTextContent:
       "Quite a few of our friends got married this year! Our wedding travels brought us to Denver, Ithaca, and New York City (where we live lol).",
     textContent: "What’s your favorite wedding activity?",
